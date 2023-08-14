@@ -184,7 +184,7 @@ class BitrixService
     $db_lead->name = $data['NAME'];
     $db_lead->second_name = $data['SECOND_NAME'];
     $db_lead->last_name = $data['LAST_NAME'];
-    $db_lead->birthdate = $data['BIRTHDATE'];
+    $db_lead->birthdate = $data['BIRTHDATE'] === '' ? null : $data['BIRTHDATE'];
     $db_lead->phone = $data['PHONE'];
     $db_lead->email = $data['EMAIL'];
     $db_lead->comment = $data['COMMENTS'];
